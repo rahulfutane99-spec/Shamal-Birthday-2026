@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Shamal ❤️</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: #fff0f5;
+  color: #793b58;
+  overflow-x: hidden;
+}
+
+/* HERO BACKGROUND */
+
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(255,192,218,.35),rgba(255,192,218,.45)),
+    url("pink-background.png") center/cover no-repeat,
+    linear-gradient(135deg,#ffb6d1,#fff0f5,#f4a6c1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 20px;
+  position: relative;
+}
+
+.hero small {
+  letter-spacing: 4px;
+  color: #a34470;
+  font-size: 13px;
+}
+
+.hero h1 {
+  font-size: clamp(42px,8vw,75px);
+  margin: 20px 0 5px;
+  color: #793b58;
+}
+
+.hero h2 {
+  font-size: clamp(45px,9vw,85px);
+  font-style: italic;
+  color: #d63384;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 19px;
+  max-width: 550px;
+  line-height: 1.8;
+}
+
+.button {
+  display: inline-block;
+  background: #d63384;
+  color: white;
+  padding: 15px 30px;
+  margin-top: 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: .3s;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #a92765;
+  transform: scale(1.05);
+}
+
+/* FLOATING HEARTS */
+
+.heart {
+  position: fixed;
+  bottom: -40px;
+  color: #e75480;
+  font-size: 23px;
+  animation: float 9s linear infinite;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.heart:nth-child(2) { left: 15%; animation-delay: 2s; }
+.heart:nth-child(3) { left: 40%; animation-delay: 4s; }
+.heart:nth-child(4) { left: 70%; animation-delay: 1s; }
+.heart:nth-child(5) { left: 90%; animation-delay: 5s; }
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+/* COMMON SECTIONS */
+
+section {
+  padding: 75px 20px;
+  text-align: center;
+}
+
+section h2 {
+  color: #d63384;
+  font-size: clamp(30px,5vw,42px);
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 17px;
+  margin-bottom: 35px;
+  line-height: 1.7;
+}
+
+/* MEMORIES */
+
+.memories {
+  background: #fff0f5;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 25px;
+  max-width: 950px;
+  margin: auto;
+}
+
+.polaroid {
+  background: white;
+  padding: 12px 12px 25px;
+  box-shadow: 0 5px 20px #d88da955;
+  transform: rotate(-2deg);
+  transition: .3s;
+}
+
+.polaroid:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.polaroid:hover {
+  transform: rotate(0) scale(1.04);
+}
+
+.polaroid img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.polaroid p {
+  margin-top: 15px;
+  font-style: italic;
+}
+
+/* QUIZ */
+
+.quiz {
+  background: #fbd5e3;
+}
+
+.quiz-box {
+  max-width: 550px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px #d88da944;
+}
+
+.quiz-box button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  background: #ffe1ed;
+  border: 1px solid #f4a6c1;
+  border-radius: 12px;
+  color: #793b58;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.quiz-box button:hover {
+  background: #f4a6c1;
+}
+
+#answer {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* LOVE LETTER */
+
+.letter {
+  background: #fff8fa;
+}
+
+.letter-box {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  line-height: 2;
+  box-shadow: 0 5px 25px #d88da944;
+  font-size: 18px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #d63384;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+  line-height: 2;
+}
+
+/* MOBILE */
+
+@media(max-width:600px) {
+  .hero {
+    min-height: 90vh;
+  }
+
+  section {
+    padding: 55px 16px;
+  }
+
+  .letter-box {
+    padding: 22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING HEARTS -->
+<div class="heart">💗</div>
+<div class="heart">💕</div>
+<div class="heart">❤️</div>
+<div class="heart">💖</div>
+<div class="heart">💗</div>
+
+<!-- HOMEPAGE -->
+<header class="hero">
+
+  <small>✨ A LITTLE SURPRISE FOR YOU ✨</small>
+
+  <h1>Happy Birthday</h1>
+
+  <h2>My Shamal ❤️</h2>
+
+  <p>
+    Today is all about you!
+    I created this little world to celebrate
+    someone very special.
+  </p>
+
+  <p style="margin-top:15px">
+    With lots of love, Rahul 💗
+  </p>
+
+  <a href="#memories" class="button">
+    OPEN YOUR SURPRISE ❤️
+  </a>
+
+  <p style="margin-top:35px;font-size:14px">
+    ↓ SCROLL DOWN FOR MORE SURPRISES ↓
+  </p>
+
+</header>
+
+<!-- MEMORIES -->
+<section class="memories" id="memories">
+
+  <h2>Let's See Our Memories 📸</h2>
+
+  <p class="subtitle">
+    Every picture tells a beautiful story.
+    Here are some of my favourite moments.
+  </p>
+
+  <div class="gallery">
+
+    <div class="polaroid">
+      <img src="photo1.jpg" alt="Our memory 1">
+      <p>Our beautiful beginning ❤️</p>
+    </div>
+
+    <div class="polaroid">
+      <img src="photo2.jpg" alt="Our memory 2">
+      <p>My favourite smile 💗</p>
+    </div>
+
+    <div class="polaroid">
+      <img src="photo3.jpg" alt="Our memory 3">
+      <p>Little moments, big memories</p>
+    </div>
+
+    <div class="polaroid">
+      <img src="photo4.jpg" alt="Our memory 4">
+      <p>Forever special 🌸</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- LOVE QUIZ -->
+<section class="quiz" id="quiz">
+
+  <h2>How Well Do You Know Rahul? 💕</h2>
+
+  <p class="subtitle">
+    Let's play a little love quiz!
+  </p>
+
+  <div class="quiz-box">
+
+    <h3 id="question">Who created this birthday website?</h3>
+
+    <div id="options">
+      <button onclick="check('Rahul')">Rahul ❤️</button>
+      <button onclick="check('Shamal')">Shamal 💗</button>
+      <button onclick="check('Someone else')">Someone else</button>
+    </div>
+
+    <p id="answer"></p>
+
+    <button class="button" id="next" onclick="nextQuestion()" style="display:none">
+      NEXT QUESTION →
+    </button>
+
+  </div>
+
+</section>
+
+<!-- LOVE LETTER -->
+<section class="letter" id="letter">
+
+  <h2>A Special Letter For You 💌</h2>
+
+  <div class="letter-box">
+
+    <h3>To My Special Shamal ❤️</h3>
+
+    <p>
+      Happy Birthday, Shamal!
+      Today I want to remind you how special you are.
+    </p>
+
+    <p>
+      Thank you for bringing happiness,
+      beautiful memories and so many smiles
+      into my life.
+    </p>
+
+    <p>
+      I hope your birthday is filled with
+      happiness, laughter and everything
+      you wish for.
+    </p>
+
+    <p>
+      Let's continue making beautiful
+      memories together.
+    </p>
+
+    <h3>With lots of love,</h3>
+
+    <h2>Rahul ❤️</h2>
+
+    <p>Forever special 💗</p>
+
+  </div>
+
+</section>
+
+<!-- FINAL SURPRISE -->
+<section style="background:#fbd5e3">
+
+  <h2>Happy Birthday Once Again! 🎂</h2>
+
+  <p class="subtitle">
+    May your life always be filled with
+    happiness, love and beautiful surprises.
+  </p>
+
+  <h1 style="font-size:55px">❤️ 🌹 💗</h1>
+
+  <h2 style="margin-top:20px">
+    I Love You, Shamal!
+  </h2>
+
+  <p>Made with love by Rahul 💕</p>
+
+</section>
+
+<footer>
+  Made with ❤️ for Shamal
+  <br>
+  A birthday surprise by Rahul
+</footer>
+
+<script>
+const questions = [
+  {
+    q: "Who created this birthday website?",
+    options: ["Rahul ❤️","Shamal 💗","Someone else"],
+    correct: "Rahul ❤️"
+  },
+  {
+    q: "What is our special nickname?",
+    options: ["My Sha 💗","My Star ⭐","My Angel 🌸"],
+    correct: "My Sha 💗"
+  },
+  {
+    q: "Which month is special to us?",
+    options: ["February ❤️","June 💕","December 🌹"],
+    correct: "February ❤️"
+  },
+  {
+    q: "Who says I love you more?",
+    options: ["Rahul","Shamal","Both ❤️"],
+    correct: "Both ❤️"
+  },
+  {
+    q: "Who is the birthday star?",
+    options: ["Rahul","Shamal 👑","Both"],
+    correct: "Shamal 👑"
+  }
+];
+
+let current = 0;
+
+function loadQuestion() {
+  document.getElementById("question").innerText =
+    questions[current].q;
+
+  document.getElementById("options").innerHTML =
+    questions[current].options.map(option =>
+      `<button onclick="check('${option}')">${option}</button>`
+    ).join("");
+
+  document.getElementById("answer").innerText = "";
+  document.getElementById("next").style.display = "none";
+}
+
+function check(selected) {
+  const correct = questions[current].correct;
+
+  document.getElementById("answer").innerText =
+    selected === correct
+    ? "Correct! You know us so well! 💗"
+    : "Nice try! The answer is " + correct + " ❤️";
+
+  document.getElementById("next").style.display = "block";
+}
+
+function nextQuestion() {
+  current++;
+
+  if (current < questions.length) {
+    loadQuestion();
+  } else {
+    document.getElementById("question").innerText =
+      "You completed our Love Quiz! ❤️";
+
+    document.getElementById("options").innerHTML =
+      "<p>Every answer is special because it's about us. 💕</p>";
+
+    document.getElementById("answer").innerText =
+      "Happy Birthday, Shamal! 🎂";
+
+    document.getElementById("next").style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
